@@ -1,0 +1,66 @@
+﻿@model ProjetoLuisFE.Models.Reserva
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FuncionarioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuncionarioId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipamentoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipamentoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Setor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Setor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipamentoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipamentoNome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
