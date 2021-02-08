@@ -17,19 +17,16 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.Label("Funcionario", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FuncionarioId, new { htmlAttributes = new { @class = "form-control" } })
 
-                @Html.DropDownList("FuncionarioId", new SelectList(ViewBag.Funcionario, "FuncionarioId", "Nome"), new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-md-10">
+                @Html.DropDownList("Funcionario_Id", new SelectList(ViewBag.Funcionarios, "FuncionarioId","Nome"), new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.Label("EquipamentoId", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Equipamento", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EquipamentoId, new { htmlAttributes = new { @class = "form-control" } })
-
-                @Html.DropDownList("EquipamentoId", new SelectList(ViewBag.Funcionario, "FuncionarioId", "Nome"), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Equipamento_Id", new SelectList(ViewBag.Equipamento, "EquipamentoId", "EquipamentoNome"), new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 

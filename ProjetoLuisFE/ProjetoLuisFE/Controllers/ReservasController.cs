@@ -38,8 +38,8 @@ namespace ProjetoLuisFE.Controllers
         // GET: Reservas/Create
         public ActionResult Create()
         {
-            ViewBag.Funcionarios = db.Funcionarios.ToList().OrderBy(x => x.Nome);
-            ViewBag.Equipamentos = db.Equipamento.ToList().OrderBy(x => x.EquipamentoNome);
+            ViewBag.Funcionarios = db.Funcionarios.ToList().OrderBy(x => x.FuncionarioId);
+            ViewBag.Equipamentos = db.Equipamento.ToList().OrderBy(x => x.EquipamentoId);
             return View();
         }
 
