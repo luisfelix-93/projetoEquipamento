@@ -13,5 +13,6 @@ namespace ProjetoLuisFE.Models
         public string Nome { get; set; }
         public string Usuario { get; set; }
         public string Setor { get; set; }
+        public bool Ativo { get; set; }
     }
 }

@@ -1,29 +1,29 @@
 ﻿@model ProjetoLuisFE.Models.Reserva
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes de Reserva";
 }
 
-<h2>Details</h2>
+<h2>Detalhe de Reserva</h2>
 
 <div>
-    <h4>Reserva</h4>
+    <h4>Reserva de Material</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.FuncionarioId)
+            @Html.DisplayNameFor(model => model.Funcionario_Id)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FuncionarioId)
+            @Html.DisplayFor(model => model.Funcionario_Id)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EquipamentoId)
+            @Html.DisplayNameFor(model => model.Equipamento_Id)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EquipamentoId)
+            @Html.DisplayFor(model => model.Equipamento_Id)
         </dd>
 
         <dt>
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservaId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ReservaId }) |
+    @Html.ActionLink("Voltar para Lista", "Index")
 </p>

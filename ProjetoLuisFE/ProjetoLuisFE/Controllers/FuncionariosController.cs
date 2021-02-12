@@ -46,7 +46,7 @@ namespace ProjetoLuisFE.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FuncionarioId,Nome,Usuario,Setor")] Funcionarios funcionarios)
+        public ActionResult Create([Bind(Include = "FuncionarioId,Nome,Usuario,Setor, Ativo")] Funcionarios funcionarios)
         {
             if (ModelState.IsValid)
             {

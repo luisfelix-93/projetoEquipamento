@@ -20,26 +20,32 @@
         <th>
             @Html.DisplayNameFor(model => model.Setor)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Setor)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FuncionarioId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FuncionarioId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FuncionarioId })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Usuario)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Setor)
+    </td>
+    <th>
+        @Html.CheckBoxFor(modelItem => item.Ativo)
+    </th>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.FuncionarioId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.FuncionarioId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.FuncionarioId })
+    </td>
+</tr>
 }
 
 </table>

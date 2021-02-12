@@ -17,7 +17,26 @@ namespace ProjetoLuisFE.Controllers
         // GET: Reservas
         public ActionResult Index()
         {
-            return View(db.Reserva.ToList());
+            List<Reserva> ListaReservas = db.Reserva.ToList();
+            foreach (var item in ListaReservas)
+            {
+                if (item.Funcionario_Id != 0)
+                {
+                    item.Nome = db.Funcionarios.Where(x => x.FuncionarioId == item.Funcionario_Id).ToList().FirstOrDefault().Nome;
+                    item.Usuario = db.Funcionarios.Where(x => x.FuncionarioId == item.Funcionario_Id).ToList().FirstOrDefault().Usuario;
+                    item.Setor = db.Funcionarios.Where(x => x.FuncionarioId == item.Funcionario_Id).ToList().FirstOrDefault().Setor;
+                }
+
+
+
+
+                if (item.Equipamento_Id != 0)
+                {
+                    item.EquipamentoNome = db.Equipamento.Where(x => x.EquipamentoId == item.Equipamento_Id).ToList().FirstOrDefault().EquipamentoNome;
+                }
+
+            }
+            return View(ListaReservas);
         }
 
         // GET: Reservas/Details/5
@@ -48,7 +67,7 @@ namespace ProjetoLuisFE.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReservaId,FuncionarioId,EquipamentoId")] Reserva reserva)
+        public ActionResult Create([Bind(Include = "ReservaId,Funcionario_Id,Equipamento_Id")] Reserva reserva)
         {
             if (ModelState.IsValid)
             {
