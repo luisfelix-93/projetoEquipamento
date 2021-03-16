@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ProjetoLuisFE.Models.Funcionarios>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Funcionários";
 }
 
-<h2>Index</h2>
+<h2>Página do Funcionário</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Adicionar", "Create")
 </p>
 <table class="table">
     <tr>
@@ -20,9 +20,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Setor)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ativo)
-        </th>
+       
         <th></th>
     </tr>
 
@@ -37,13 +35,11 @@
     <td>
         @Html.DisplayFor(modelItem => item.Setor)
     </td>
-    <th>
-        @Html.CheckBoxFor(modelItem => item.Ativo)
-    </th>
+    
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.FuncionarioId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.FuncionarioId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.FuncionarioId })
+        @Html.ActionLink("Editar", "Edit", new { id = item.FuncionarioId }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.FuncionarioId }) |
+        @Html.ActionLink("Deletar", "Delete", new { id = item.FuncionarioId })
     </td>
 </tr>
 }

@@ -247,3 +247,4 @@ C:\Users\luisf\OneDrive\Área de Trabalho\Estudos\projetoEquipamento\ProjetoLuis
 C:\Users\luisf\OneDrive\Área de Trabalho\Estudos\projetoEquipamento\ProjetoLuisFE\ProjetoLuisFE\obj\Debug\ProjetoLuisFE.csproj.CopyComplete
 C:\Users\luisf\OneDrive\Área de Trabalho\Estudos\projetoEquipamento\ProjetoLuisFE\ProjetoLuisFE\obj\Debug\ProjetoLuisFE.dll
 C:\Users\luisf\OneDrive\Área de Trabalho\Estudos\projetoEquipamento\ProjetoLuisFE\ProjetoLuisFE\obj\Debug\ProjetoLuisFE.pdb
+C:\Users\luisf\OneDrive\Área de Trabalho\Estudos\projetoEquipamento\ProjetoLuisFE\ProjetoLuisFE\obj\Debug\ProjetoLuisFE.csprojAssemblyReference.cache

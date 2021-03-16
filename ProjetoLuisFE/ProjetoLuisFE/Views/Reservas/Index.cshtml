@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Setor)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EquipamentoNome)
+            @Html.DisplayName("Equipamento")
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,9 @@
                     @Html.DisplayFor(modelItem => item.EquipamentoNome)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReservaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReservaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReservaId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.ReservaId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ReservaId }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ReservaId })
         </td>
     </tr>
 }

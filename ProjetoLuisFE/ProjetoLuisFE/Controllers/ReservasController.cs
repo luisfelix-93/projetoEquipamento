@@ -51,6 +51,13 @@ namespace ProjetoLuisFE.Controllers
             {
                 return HttpNotFound();
             }
+            else
+            {
+                reserva.Nome = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Nome;
+                reserva.Usuario = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Usuario;
+                reserva.Setor = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Setor;
+                reserva.EquipamentoNome = db.Equipamento.Where(x => x.EquipamentoId == reserva.Equipamento_Id).ToList().FirstOrDefault().EquipamentoNome;
+            }
             return View(reserva);
         }
 
@@ -82,6 +89,8 @@ namespace ProjetoLuisFE.Controllers
         // GET: Reservas/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.Funcionarios = db.Funcionarios.ToList().OrderBy(x => x.FuncionarioId);
+            ViewBag.Equipamentos = db.Equipamento.ToList().OrderBy(x => x.EquipamentoId);
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -90,6 +99,13 @@ namespace ProjetoLuisFE.Controllers
             if (reserva == null)
             {
                 return HttpNotFound();
+            }
+            else
+            {
+                reserva.Nome = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Nome;
+                reserva.Usuario = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Usuario;
+                reserva.Setor = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Setor;
+                reserva.EquipamentoNome = db.Equipamento.Where(x => x.EquipamentoId == reserva.Equipamento_Id).ToList().FirstOrDefault().EquipamentoNome;
             }
             return View(reserva);
         }
@@ -121,6 +137,13 @@ namespace ProjetoLuisFE.Controllers
             if (reserva == null)
             {
                 return HttpNotFound();
+            }
+            else
+            {
+                reserva.Nome = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Nome;
+                reserva.Usuario = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Usuario;
+                reserva.Setor = db.Funcionarios.Where(x => x.FuncionarioId == reserva.Funcionario_Id).ToList().FirstOrDefault().Setor;
+                reserva.EquipamentoNome = db.Equipamento.Where(x => x.EquipamentoId == reserva.Equipamento_Id).ToList().FirstOrDefault().EquipamentoNome;
             }
             return View(reserva);
         }
